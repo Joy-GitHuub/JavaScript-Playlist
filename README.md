@@ -93,7 +93,7 @@ let p = a/b; // 10
             1. An Object
             2. An Array
             3. A Date
-
+### Example:
 ```js
 // Numbers:
 let length = 16;
@@ -115,4 +115,29 @@ const cars = ["Saab", "Volvo", "BMW"];
 
 // Date object:
 const date = new Date("2022-03-25");
+```
+
+
+### The Typeof Operator
+- You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+- The typeof operator returns the type of a variable or an expression:
+### Example:
+```js
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof 0              // Returns "number"
+typeof 314            // Returns "number"
+typeof (3 + 4)        // Returns "number"
+let car;    // Value is undefined, type is undefined
+```
+
+## 3 JavaScript Function
+- A JavaScript Function is a block of code designed to perform a particular task.
+- A JavaScript function is executed when "something" invokes it (calls it).
+### 3.1 Function Syntax
+### Example:
+```js 
+function myFunction(num1, num2) {
+    return num1 * num2;
+};
 ```

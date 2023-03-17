@@ -75,3 +75,21 @@ let y = a-b; // 18
 let z = a*b; // 40
 let p = a/b; // 10
 ```
+
+
+## 2 JavaScript Data Types
+
+### 2.1 How Many Data Types?
+- JavaScript has 8 DataTypes
+    - String
+    - Number
+    - Boolean
+    - Undefined
+    - Null
+    - Bigint
+    - Symbol
+    - Object
+        - The Object DataTypes
+            1. An Object
+            2. An Array
+            3. A Date

@@ -58,9 +58,9 @@ let z = x + y;
 
 ### 1.6 Arithmetic Operatros
 - Arithmetic operators perform arithmetic on numbers (literals or variables).
-    - +  => Addition
-    - -  => Subtraction
-    - *     => Multiplication
+    - + => Addition
+    - - => Subtraction
+    - * => Multiplication
     - **    => Exponentiation (ES2016)
     - /     => Division
     -  %    => Modulus (Remainder)

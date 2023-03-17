@@ -66,3 +66,12 @@ let z = x + y;
     -  (%)Modulus (Remainder)
     - (++)Increment
     - (--)Decrement
+ ### Example: 
+ ```js 
+let a = 20;
+let b = 2;
+let x = a+b; //22
+let y = a-b; // 18
+let z = a*b; // 40
+let p = a/b; // 10
+```

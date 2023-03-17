@@ -45,3 +45,12 @@ let y = 2;
 // Assign the value x + y to z:
 let z = x + y;
 ```
+
+### 1.5 Types of JavaScript Operators
+- There are Different types of JavaScript operators:
+     -  Arithmetic Operators
+     -  Assignment Operators
+     -  Comparison Operators
+     -  Logical Operators
+     -  Conditional Operators
+     -  Type Operators

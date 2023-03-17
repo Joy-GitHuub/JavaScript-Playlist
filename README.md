@@ -54,3 +54,15 @@ let z = x + y;
      -  Logical Operators
      -  Conditional Operators
      -  Type Operators
+
+
+### 1.6 Arithmetic Operatros
+- Arithmetic operators perform arithmetic on numbers (literals or variables).
+    - +  => Addition
+    - -  => Subtraction
+    - *     => Multiplication
+    - **    => Exponentiation (ES2016)
+    - /     => Division
+    -  %    => Modulus (Remainder)
+    - ++    => Increment
+    - --    => Decrement

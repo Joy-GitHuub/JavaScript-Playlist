@@ -244,3 +244,37 @@ console.log('employeeId' in employee);
 false
 true
 ``` 
+
+## 5 JavaScript Strings
+ ### 5.1 What is JS String?
+ - Summary: in this tutorial, you’ll learn about the JavaScript string primitive type and how to use it to define strings.
+ - JavaScript strings are primitive values. Also, strings are immutable. It means that if you modify a string, you will always get a new string. The original string doesn’t change.
+
+ ### 5.2 String Methods
+ ### Example:
+ ```js
+let str = "Good Morning"
+console.log(str.length); // 13
+
+// Accessing characters
+let str = "Hello";
+console.log(str[0]); // "H"
+
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+```

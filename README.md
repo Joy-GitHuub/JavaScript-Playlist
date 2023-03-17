@@ -227,3 +227,20 @@ let person = {
 delete person.age;
 console.log(person);
 ```
+
+### 4.6 Checking if a property exists
+- To check if a property exists in an object, you use the 'in' operator:
+### Example:
+```js
+let employee = {
+    firstName: 'Peter',
+    lastName: 'Doe',
+    employeeId: 1
+};
+console.log('ssn' in employee);
+console.log('employeeId' in employee);
+
+// Output:
+false
+true
+``` 

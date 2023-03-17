@@ -277,4 +277,54 @@ String padEnd()
 String charAt()
 String charCodeAt()
 String split()
+
+//  Extracting String Part
+- There are 3 methods for extracting a part of a string:
+1. slices(start, end);
+2. substring(start, end);
+3. substr(start, length);
+
+// JavaScript String Slice()
+let text = "Apple, Banana, Kiwi";
+let part = text.slice(7, 13);
+
+// Replacing String Content
+const text = "Please Learn JS";
+const newText = text.replace("JS", "JavaScript");
+
+// String Concat()
+let text1 = "Hello";
+let text2 = "World";
+let text3 = text1.concat(" ", text2);
+
+// String Trim
+- The trim() method removes whitespace from both sides of a string:
+let text1 = "      Hello World!      ";
+let text2 = text1.trim();
+
+// JavaScript String charAt()
+- The charAt() method returns the character at a specified index (position) in a string:
+let text = "HELLO WORLD";
+let char = text.charAt(0);
+
+// JavaScript String Split()
+text.split(",")    // Split on commas
+text.split(" ")    // Split on spaces
+text.split("|")    // Split on pipe
+```
+
+
+
+### 5.3 String Search Methods
+### Example:
+```js
+// JavaScript Search Methods
+1. String indexOf();
+1. String lastIndexOf();
+1. String search();
+1. String match();
+1. String matchAll();
+1. String includes();
+1. String startsWith();
+1. String endsWith();
 ```

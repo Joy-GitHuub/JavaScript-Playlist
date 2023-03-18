@@ -117,8 +117,25 @@ const cars = ["Saab", "Volvo", "BMW"];
 const date = new Date("2022-03-25");
 ```
 
+### 2.2 Different Data Types in JS?
+- Primitive data types are number, string, boolean, NULL, Infinity and symbol. Non-primitive data types is the object. The JavaScript arrays and functions are also objects.
+### Example:
+```js
+- What is JavaScript Primitive Data Type?
+1. String
+2. Number
+3. Boolean
+4. Symbol
+5. undefined
+5. null
 
-### The Typeof Operator
+- What is JavaScript non-Primitive Data Type?
+1. Object
+2. Array
+3. Function
+```
+
+### 2.3 The Typeof Operator
 - You can use the JavaScript typeof operator to find the type of a JavaScript variable.
 - The typeof operator returns the type of a variable or an expression:
 ### Example:
@@ -418,7 +435,48 @@ console.log(typeof z);
   if(isNaN(n) == true)   // NaN means >> Not a Number
   {
       console.log("yes, it's a string");
-  }else{
+  }
+  else{
       console.log("no, it's a number");
-      }
+    }
+```
+
+### 7.4 Number toString() 
+- By default, JavaScript displays numbers as base 10 decimals.
+- But you can use the toString() method to output numbers from base 2 to base 36.
+- Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
+### Example:
+```js
+let myNumber = 32;
+myNumber.toString(32);
+myNumber.toString(16);
+myNumber.toString(12);
+myNumber.toString(10);
+myNumber.toString(8);
+myNumber.toString(2);
+
+- To use the toString() method, you simply need to call the method on a number value. 
+var num = 24;
+var str = num.toString();
+24.toString(); // Error: Invalid or unexpected token
+(24).toString(); // "24"
+(9.7).toString(); // "9.7"
+(-20).toString(); // "-20"
+```
+
+### 7.5 Numbers as Objects
+- Normally JavaScript numbers are primitive values created from literals
+- But Numbers can also be defined as objects with the keyword "new"
+### Example:
+```js
+let x = 123; //typeof Number;
+let y = new Number(123); // typeof Object;
+- Note: 
+1. Do not create Number objects.
+2. The new keyword complicates the code and slows down execution speed.
+
+let x = new Number(500);
+let y = new Number(500);
+console.log(x == y)
+3. Comparing two JavaScript objects always returns false.
 ```

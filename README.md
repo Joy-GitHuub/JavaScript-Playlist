@@ -575,14 +575,13 @@ let lastFruit = fruits[fruits.length - 1];
 - The unshift() method adds a new element to an array (at the beginning)
 - The unshift() method returns the new array length
 
-### Array Changing Elements
+### 8.9 Array Changing Elements
 - Array elements are accessed using their index number
 - const fruits = ["Banana", "Orange", "Apple", "Mango"];
 - fruits[0] = "Kiwi";
 
-### Merging (Concatenating) Arrays
+### 8.10 Merging (Concatenating) Arrays
 - The concat() method creates a new array by merging (concatenating) existing arrays
-
 ### Example:
 ```js
 
@@ -611,3 +610,5 @@ const myGirls = ["Cecilie", "Lone"];
 const myBoys = ["Emil", "Tobias", "Linus"];
 const myChildren = myGirls.concat(myBoys);
 ```
+
+###

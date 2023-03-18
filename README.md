@@ -936,3 +936,186 @@ const q3 = ["Jul", "Aug", "Sep"];
 const q4 = ["Oct", "Nov", "May"];
 const year = [...q1, ...q2, ...q3, ...q4];
 ```
+
+## 10 Variable Const
+
+### 10.1 Array Const
+- In 2015, JavaScript introduced an important new keyword: const.
+- It has become a common practice to declare arrays using const:
+- Cannot be Reassigned
+- Array Elements Can be Reassigned
+- An array declared with const cannot be reassigned
+- Const Block Scope
+- An array declared with const has Block Scope.
+- An array declared with var does not have block scope
+
+### Example:
+```js
+const cars = ["Saab", "Volvo", "BMW"];
+
+const cars = ["Saab", "Volvo", "BMW"];
+cars = ["Toyota", "Volvo", "Audi"];  ///Error
+
+// You can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
+// You can change an element:
+cars[0] = "Toyota";
+// You can add an element:
+cars.push("Audi");
+
+const cars; // Error
+cars = ["Saab", "Volvo", "BMW"]; //Error
+
+
+const cars = ["Saab", "Volvo", "BMW"];
+// Here cars[0] is "Saab"
+{
+  const cars = ["Toyota", "Volvo", "BMW"];
+  // Here cars[0] is "Toyota"
+}
+// Here cars[0] is "Saab"
+```
+
+## 11 JavaScript Dates
+
+### 11.1 Date Objects
+### Example:
+```js
+1. new Date()
+2. new Date(date string)
+3. new Date(year,month)
+4. new Date(year,month,day)
+5. new Date(year,month,day,hours)
+6. new Date(year,month,day,hours,minutes)
+7. new Date(year,month,day,hours,minutes,seconds)
+8. new Date(year,month,day,hours,minutes,seconds,ms)
+9. new Date(milliseconds)
+
+-- new Date() creates a date object with the current date and time
+const d = new Date();
+
+*** Note:- JavaScript counts months from 0 to 11:
+        - January = 0.
+        - December = 11.
+```
+
+### 11.2 Date Formats
+- There are generally 3 types of JavaScript date input formats:
+    - ISO DATE ("2015-03-25" (The International Standard))
+    - Short DATE ("03/25/2015")
+    - Long DATE ("Mar 25 2015" or "25 Mar 2015")
+
+### 11.3 Date Get Methods
+### Example:
+```js
+1. getFullYear()	Get year as a four digit number (yyyy)
+2. getMonth()	Get month as a number (0-11)
+3. getDate()	Get day as a number (1-31)
+4. getDay()	Get weekday as a number (0-6)
+5. getHours()	Get hour (0-23)
+6. getMinutes()	Get minute (0-59)
+7. getSeconds()	Get second (0-59)
+8. getMilliseconds()	Get millisecond (0-999)
+9. getTime()	Get time (milliseconds since January 1, 1970)
+
+*** new Date()
+const d = new Date("2021-03-25");
+d.getFullYear();
+
+const d = new Date("2021-03-25");
+d.getMonth();
+
+
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const d = new Date("2021-03-25");
+let month = months[d.getMonth()];
+
+const d = new Date();
+console.log(d.getDate());
+
+const d = new Date();
+d.getHours();
+
+const d = new Date();
+d.getMinutes();
+
+const d = new Date();
+d.getSeconds();
+
+const d = new Date();
+d.getMilliseconds();
+
+const d = new Date();
+d.getDay();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const d = new Date();
+let day = days[d.getDay()];
+console.log(day);
+
+let d = new Date();
+d.getTime();
+
+
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const year = day * 365;
+let years = Math.round(Date.now() / year);
+```
+
+## 12 JavaScript Math
+
+### 12.1 Math Object
+### Example:
+```js
+1. Math.E        // returns Euler's number
+2. Math.PI       // returns PI
+3. Math.SQRT2    // returns the square root of 2
+4. Math.SQRT1_2  // returns the square root of 1/2
+5. Math.LN2   // returns the natural logarithm of 2
+6. Math.LN10  // returns the natural logarithm of 10
+7. Math.LOG2E    // returns base 2 logarithm of E
+8. Math.LOG10E   // returns base 10 logarithm of E
+
+*** Number to Integer
+1. Math.round(x)
+2. Math.ceil(x)
+3. Math.floor(x)
+4. Math.trunc(x)
+
+*** Math.min() and Math.max()
+Math.min(0, 150, 30, 20, -8, -200);
+Math.max(0, 150, 30, 20, -8, -200);
+
+*** Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
+Math.random()
+
+// Method	Description
+abs(x)	Returns the absolute value of x
+acos(x)	Returns the arccosine of x, in radians
+acosh(x)	Returns the hyperbolic arccosine of x
+asin(x)	Returns the arcsine of x, in radians
+asinh(x)	Returns the hyperbolic arcsine of x
+atan(x)	Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+atan2(y, x)	Returns the arctangent of the quotient of its arguments
+atanh(x)	Returns the hyperbolic arctangent of x
+cbrt(x)	Returns the cubic root of x
+ceil(x)	Returns x, rounded upwards to the nearest integer
+cos(x)	Returns the cosine of x (x is in radians)
+cosh(x)	Returns the hyperbolic cosine of x
+exp(x)	Returns the value of Ex
+floor(x)	Returns x, rounded downwards to the nearest integer
+log(x)	Returns the natural logarithm (base E) of x
+max(x, y, z, ..., n)	Returns the number with the highest value
+min(x, y, z, ..., n)	Returns the number with the lowest value
+pow(x, y)	Returns the value of x to the power of y
+random()	Returns a random number between 0 and 1
+round(x)	Rounds x to the nearest integer
+sign(x)	Returns if x is negative, null or positive (-1, 0, 1)
+sin(x)	Returns the sine of x (x is in radians)
+sinh(x)	Returns the hyperbolic sine of x
+sqrt(x)	Returns the square root of x
+tan(x)	Returns the tangent of an angle
+tanh(x)	Returns the hyperbolic tangent of a number
+trunc(x)	Returns the integer part of a number (x)
+```

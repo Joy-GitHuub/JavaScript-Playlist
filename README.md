@@ -260,23 +260,23 @@ console.log(str.length); // 13
 let str = "Hello";
 console.log(str[0]); // "H"
 
-String length
-String slice()
-String substring()
-String substr()
-String replace()
-String replaceAll()
-String toUpperCase()
-String toLowerCase()
-String concat()
-String trim()
-String trimStart()
-String trimEnd()
-String padStart()
-String padEnd()
-String charAt()
-String charCodeAt()
-String split()
+1. String length
+2. String slice()
+3. String substring()
+4. String substr()
+5. String replace()
+6. String replaceAll()
+7. String toUpperCase()
+8. String toLowerCase()
+9. String concat()
+10. String trim()
+11. String trimStart()
+12. String trimEnd()
+13. String padStart()
+14. String padEnd()
+15. String charAt()
+16. String charCodeAt()
+17. String split()
 
 //  Extracting String Part
 - There are 3 methods for extracting a part of a string:
@@ -320,11 +320,50 @@ text.split("|")    // Split on pipe
 ```js
 // JavaScript Search Methods
 1. String indexOf();
-1. String lastIndexOf();
-1. String search();
-1. String match();
-1. String matchAll();
-1. String includes();
-1. String startsWith();
-1. String endsWith();
+2. String lastIndexOf();
+3. String search(); //Recived regular expression
+4. String match(); //Recived regular expression
+5. String matchAll(); //Recived regular expression
+6. String includes(); // not regular expression
+7. String startsWith(); // not regular expression
+8. String endsWith(); //not regular expression
+
+// String matchAll()
+let text = "I love cats. Cats are very easy to love. Cats are very popular."
+const x = (text.matchAll(/Cats/gi));
+for (const i of x) {
+    console.log(i);
+};
+
+// String includes
+let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+```
+
+## 6 JavaScript Template Literals
+### 6.1 What is Template Literals?
+- Template literals are literals delimited with backtick ( ` ) characters, allowing for multi-line strings, string interpolation with embedded expressions, and special constructs called tagged templates.
+- Synonyms:
+    -Template Literals
+    -Template Strings
+    -String Templates
+    -Back-Tics Syntax
+
+### Examples:
+```js
+let text = `Hello World!`;
+let text = `He's often called "Johnny"`;
+
+let text =
+`The quick
+brown fox
+jumps over
+the lazy dog`;
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`;
+
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
 ```

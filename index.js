@@ -1,2 +1,4 @@
-let x = Number.MAX_SAFE_INTEGER;
-console.log(x);
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys.concat(["Joy", "Kadar"]));
+console.log(myChildren);

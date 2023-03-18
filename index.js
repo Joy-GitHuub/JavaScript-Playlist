@@ -1,1 +1,2 @@
-console.log(Number(new Date("1970-01-01")));
+let x = Number.MAX_SAFE_INTEGER;
+console.log(x);

@@ -522,3 +522,29 @@ Number(new Date("1970-01-01")); //output 0
     a. Number.isInteger(10);
     b. Number.isSafeInteger(12345678901234567890);
 ```
+
+## 8 JavaScript Arrays
+### 8.1 What is javaScript Array?
+- An array is a special variable, which can hold more than one value:
+- const cars = ["Saab", "Volvo", "BMW"];
+
+### 8.2 Why use Arrays?
+- An array can hold many values under a single name, and you can access the values by referring to an index number.
+- Arrays are used to store multiple values in a single variable. This is compared to a variable that can store only one value. Each item in an array has a number attached to it, called a numeric index, that allows you to access it. In JavaScript, arrays start at index zero and can be manipulated with various methods.
+
+### 8.3 Using the JavaScript Keyword new
+- const cars = new Array("Saab", "Volvo", "BMW");
+
+### Example:
+```js
+1. const cars = ["Saab", "Volvo", "BMW"];
+2. const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+3. const cars = new Array("Saab", "Volvo", "BMW");
+
+*** Note:
+    - Array index start with 0.
+    - [0] is the first element. [1] is the second element.
+```

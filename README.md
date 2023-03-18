@@ -804,9 +804,135 @@ console.log(max);
 - The every() method checks if all array values pass a test.
 ### Example:
 ```js
+*** Note: that the function takes 3 arguments:
+    - The item value
+    - The item index
+    - The array itself
+    - thisArg?: (any): boolean (optional)-acc
 const array = [10, 20, 30, 40, 500, 60, 70, 80, 90];
 let every = array.every(function (value, index, array) {
     return value >= 10;
+},true);
+console.log(every);
+
+
+// Implementation every() in JavaScript
+function myEveryFun(array, cb, acc) {
+    for (let i = 0; i < array.length; i++) {
+        if (cb(array[i], i, array)) {
+            acc = true;
+        } else {
+            acc = false;
+            return acc;
+        }
+    };
+    return acc;
+};
+
+const every = myEveryFun(array, function (value, index, array) {
+    return value >= 10;
 }, true);
 console.log(every);
+```
+
+### 9.8 Array some()
+- The some() method checks if some array values pass a test.
+### Example:
+```js
+*** Note: that the function takes 3 arguments:
+    - The item value
+    - The item index
+    - The array itself
+    - thisArg?: (any): boolean (optional)-acc
+let some = array.some(function (value, index, array) {
+    return value > 100
+}, false);
+console.log(some);
+
+// implementation some() methods
+const array = [10, 20, 30, 1, 500, 60, 70, 80, 90];
+function mySomeFun(array, cb, acc) {
+    for (let i = 0; i < array.length; i++) {
+        const value = array[i];
+        if (cb(value, i, array)) {
+            acc = true;
+            return acc
+        } else {
+            acc = false;
+        }
+    };
+    return acc;
+};
+const some = mySomeFun(array, function (value, i, array) {
+    return value % 10 != 0;
+}, true);
+console.log(some);
+```
+
+### 9.9 Array find()
+- The find() method returns the value of the first array element that passes a test function.
+- This example finds (returns the value of) the first element that is larger than 18
+### Example:
+```js
+*** Note that the function takes 3 arguments:
+        - The item value
+        - The item index
+        - The array itself
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+function myFunction(value, index, array) {
+  return value > 18;
+};
+
+const array = [10, 20, 30, 10, 501, 60, 70, 80, 90];
+let find = array.find(function (value, index, array) {
+    return value % 2 === 0;
+});
+
+
+// Implementation Find() method
+function myFindFun(array, cb) {
+    for (let i = 0; i < array.length; i++) {
+        const value = array[i];
+        if (cb(value, i, array)) {
+            return value;
+        };
+    };
+};
+let find = myFindFun(array, function (value, index, array) {
+    return value % 2 !== 0;
+});
+console.log(find);
+```
+
+### 9.10 Array indexOf()
+- The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+### Example:
+```js
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+
+console.log(beasts.indexOf('bison')); // Expected output: 1
+console.log(beasts.indexOf('bison', 2)); // Expected output: 4
+
+console.log(beasts.indexOf('giraffe')); // Expected output: -1
+```
+
+### 9.11 Array includes()
+- ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+### Example:
+```js
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.includes("Mango"); // is true
+fruits.includes("Potato"); // is false
+```
+
+### 9.12 Array Spread(...)
+- The ... operator expands an iterable (like an array) into more elements:
+### Example:
+```js
+const q1 = ["Jan", "Feb", "Mar"];
+const q2 = ["Apr", "May", "Jun"];
+const q3 = ["Jul", "Aug", "Sep"];
+const q4 = ["Oct", "Nov", "May"];
+const year = [...q1, ...q2, ...q3, ...q4];
 ```

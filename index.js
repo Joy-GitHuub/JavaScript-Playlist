@@ -66,9 +66,3 @@ console.log(max); */
     return acc + curr;
 }, 0);
 console.log(a); */
-const array = [10, 20, 30, 40, 500, 60, 70, 80, 90];
-
-let every = array.every(function (value, index, array) {
-    return value >= 10;
-}, true);
-console.log(every);

@@ -1,3 +1,1 @@
-let x = new Number(500);
-let y = new Number(500);
-console.log(x == y)
+console.log(Number(new Date("1970-01-01")));

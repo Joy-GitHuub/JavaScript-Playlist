@@ -480,3 +480,45 @@ let y = new Number(500);
 console.log(x == y)
 3. Comparing two JavaScript objects always returns false.
 ```
+
+### 7.6 JavaScript Number Methods
+-  number methods can be used on all JavaScript numbers:
+### Example:
+```js
+1. Number toString(); //The toString() method returns a number as a string.
+
+2. Number toExponential(); //toExponential() returns a string, with a number rounded and written using exponential notation.
+let x = 9.656;
+x.toExponential(2);
+x.toExponential(4);
+x.toExponential(6);
+
+3. Number toFixed(); //toFixed() returns a string, with the number written with a specified number of decimals
+let x = 9.5;
+x.toFixed(0); // output 10
+x.toFixed(2); // output 9.50
+x.toFixed(4); // output 9.5000
+x.toFixed(6); //output 9.500000
+
+4. Number toPrecision(); // toPrecision() returns a string, with a number written with a specified length
+5. Number ValueOf(); //valueOf() returns a number as a number.
+
+*** Converting Variables to Numbers
+1. Number(); //Returns a number converted from its argument.
+Number(true); //output 1
+Number(false); //output 0
+Number("10"); //output 10
+Number("  10"); //output 10
+Number("10  "); //output 10
+Number(" 10  "); //output 10
+Number("10.33"); //output 10.33
+Number("10,33"); //output NaN
+Number("10 33"); //output NaN
+Number("John"); //output NaN
+Number(new Date("1970-01-01")); //output 0
+
+2. parseFloat(); //Parses its argument and returns a floating point number
+3. parseInt(); //Parses its argument and returns a whole number
+    a. Number.isInteger(10);
+    b. Number.isSafeInteger(12345678901234567890);
+```

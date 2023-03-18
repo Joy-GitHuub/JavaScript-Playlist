@@ -367,3 +367,58 @@ let price = 10;
 let VAT = 0.25;
 let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
 ```
+
+## 7 JavaScript Numbers
+
+### 7.1 Types of number?
+- JavaScript has only one type of number. Numbers can be written with or without decimals.
+- JavaScript Numebrs are Always 64-bit Floating Point
+- Floating point arithmetic is not always 100% accurate:
+- JavaScript uses the (+) operator for both addition and concatenation.
+- Numbers are added. Strings are Concatenated.
+### Example:
+```js
+1. Floating point arithmetic is not always 100% accurate:
+let x = 0.2+ 0.1;
+
+2. To solve the problem above, it helps to multiply and divide:
+let x = (0.2 * 10 + 0.1 * 10) / 10;
+
+3. If you add two numbers, the result will be a number:
+let x = 10;
+let y = 20;
+let z = x + y;
+
+4. If you add two strings, the result will be a string concatenation:
+let x = "10";
+let y = "20";
+let z = x + y;
+```
+
+### 7.2 NaN - Not a Number
+- NaN is a JavaScript reserved word indication that a number is not a legal number.
+- NaN is a number: typeof NaN returns number: (typeof NaN).
+### Example:
+```js
+let x = 100 / "Apple";
+let x = 100 / "10";
+let x = NaN;
+let y = 5;
+let z = x + y;
+console.log(typeof z);
+```
+
+### 7.3 What is isNaN() Function
+- In JavaScript NaN is short for "Not-a-Number". The isNaN() method returns true if a value is NaN. The isNaN() method converts the value to a number before testing it.
+### Example:
+```js
+ var j ="Hello World" // isNaN (j) returns true
+  var n = 15; // isNaN (n) returns false
+
+  if(isNaN(n) == true)   // NaN means >> Not a Number
+  {
+      console.log("yes, it's a string");
+  }else{
+      console.log("no, it's a number");
+      }
+```

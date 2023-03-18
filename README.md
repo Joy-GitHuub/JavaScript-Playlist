@@ -675,7 +675,6 @@ cars.sort(function(a, b){
     -The item value
     -The item index
     -The array itself
-
 ### Example:
 ```js
 const numbers = [45, 4, 9, 16, 25];
@@ -689,7 +688,6 @@ function myFunction(value, index, array) {
 - The map() method creates a new array by performing a function on each array element.
 - The map() method does not execute the function for array eleemnts without values
 - The map() method does not change the original array.
-
 ### Example:
 ```js
 const numbers1 = [45, 4, 9, 16, 25];

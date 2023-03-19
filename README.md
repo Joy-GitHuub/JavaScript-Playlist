@@ -1197,12 +1197,12 @@ Boolean(x); // False
 - The Optional Chaining Operator (?.)
 - The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
 
-### 13.2 JS if, else and else if
-### Example:
+### 13.3 JS if, else and else if
 - Use if to specify a block of code to be executed, if a specified condition is true
 - Use else to specify a block of code to be executed, if the same condition is false
 - Use else if to specify a new condition to test, if the first condition is false
 - Use switch to specify many alternative blocks of code to be executed
+### Example:
 ```js
 if (condition) {
   //  block of code to be executed if the condition is true
@@ -1240,3 +1240,288 @@ if (time < 10) {
   greeting = "Good evening";
 }
 ```
+
+### 13.4 JS Switch Statement
+- The switch statement is used to perform different actions based on different conditions.
+- Use the switch statement to select one of many code blocks to be executed.
+
+- This is how it works:
+        - The switch expression is evaluated once.
+        - The value of the expression is compared with the values of each case.
+        - If there is a match, the associated block of code is executed.
+        - If there is no match, the default code block is executed.
+### Example:
+```js
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+
+switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+```
+
+## 14 JavaScript Loop
+- Different Kinds of Loops
+    - FOR
+    - FOR/IN
+    - FOR/OF
+    - WHILE
+    - DO/WHILE
+
+- The For Loop
+    - The for statement creates a loop with 3 optional expressions:
+        - Expression 1 is executed (one time) before the execution of the code block.
+        - Expression 2 defines the condition for executing the code block.
+        - Expression 3 is executed (every time) after the code block has been executed.
+
+- The JavaScript for in statement loops through the properties of an Object:
+- The JavaScript for of statement loops through the values of an iterable object.
+### Example:
+```js
+for (expression 1; expression 2; expression 3) {
+  // code block to be executed
+}
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+
+for (key in object) {
+  // code block to be executed
+}
+
+for (variable of iterable) {
+  // code block to be executed
+}
+
+while (condition) {
+  // code block to be executed
+}
+
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+### 14.1 Break And Continue
+- The Break statement "Jumps Out" of a loop.
+- The contunue statement "Jumps over" one iteration in the loop.
+### Example:
+```js
+let x = [3, 4, 63, 74, 2, 73, 44, 50, 44];
+for (let i = 0; i < x.length; i++) {
+    let value = x[i];
+    if (value > 60) {
+        continue;
+    }
+    console.log(value);
+};
+
+let x = [3, 4, 63, 74, 2, 73, 44, 50, 44];
+for (let i = 0; i < x.length; i++) {
+    let value = x[i];
+    if (value > 70) {
+        break;
+    }
+    console.log(value);
+}
+```
+
+## 15 JavaScript Sets
+- A JavaScript Set is a collection of unique values.
+- Each value can only occur once in Set.
+
+- Essential Set Methods
+    - Method
+        - new Set() Creates a new Set.
+        - add() Adds a new element to the Set.
+        - delete() removes an element from a Set.
+        - has() Returns true if a value exists in the Set.
+        - forEach() Invokes a callback for each element in the Set.
+        - values() Returns an iterator with all the values in a Set.
+    - Property
+        - size Returns the number of elements in a Set.
+
+### Example:
+```js
+// Create a Set
+const letters = new Set();
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+// Create a Set
+const letters = new Set(["a","b","c"]);
+
+
+const x = new Set();
+console.log(x);
+x.add("A");
+x.add("Apple");
+x.add("B");
+x.add("Ball");
+x.add("C");
+x.add("Cat");
+x.add("E");
+x.add("Ego");
+x.add("G");
+x.add("Goat");
+x.forEach(function (value, i, array) {
+    // console.log(value);
+})
+// let y = x.values();
+for (const y of x.values()) {
+    console.log(y);
+}
+
+x.clear();
+```
+        
+## 16 JavaScript Map
+- A Map holds key-value pairs where the keys can be any datatype.
+- A Map remembers the original insertion order of the keys.
+### Example:
+```js
+1. new Map()	Creates a new Map
+2. set()	Sets the value for a key in a Map
+3. get()	Gets the value for a key in a Map
+4. delete()	Removes a Map element specified by the key
+5. has()	Returns true if a key exists in a Map
+6. forEach()	Calls a function for each key/value pair in a Map
+7. entries()	Returns an iterator with the [key, value] pairs in a Map
+** size	Returns the number of elements in a Map
+
+// You can create a JavaScript Map by:
+- Passing an Array to new Map().
+- Create a Map and use Map.set().
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+fruits.set("Potato", 100);
+let apples = fruits.get("apples");
+console.log(apples);
+
+console.log(fruits) 
+fruits.delete("bananas")
+console.log(fruits)
+
+let has = fruits.has(true)
+console.log(has);
+
+fruits.forEach(function (value, key, Map) {
+    console.log(value, key, Map);
+});
+
+for (const i of fruits.entries()) {
+    console.log(i);
+}
+
+fruits.clear()
+console.log(fruits);
+```
+
+## 17 Regular Expressions
+- A Regular expression is a sequence of characters that forms a search pattern.
+- The search pattern can be used for text search and text replace operations.
+
+### 17.1 What is Regular Expression?
+- A regular expression is a sequence of characters that forms a search pattern.
+- A regular expression can be a single character, or a more complicated pattern.
+
+### 17.2 Using String Methods
+- In JavaScript, regular expressions are often used with the two string methods: search() and replace().
+- The search() method uses an expression to search for a match, and returns the position of the match.
+- The replace() method returns a modified string where the pattern is replaced.
+### Example:
+```js
+let search = "My name is Joy. I am from in bangladesh";
+console.log(search.search(/JOY/gi));
+
+let text = "cat, (Felis catus), also called house cat or domestic cat, domesticated member of the family Felidae, order Carnivora, and the smallest";
+let replace = text.replace(/cat/gi, "DOG");
+console.log(replace);
+
+console.log(/E/i.test("The best things in life are free!")); // Return TRUE/FALSE
+console.log(/H/gi.exec("The best things in life are free!")); //It searches a string for a specified pattern, and returns the found text as an object.
+
+let x = 1;
+console.log(x++); // 1
+console.log(x++); //2
+console.log(x++); // 3
+console.log(x--); // 4
+console.log(x--); //3
+console.log(x--); //2
+let x =1;
+console.log(++x); //2
+console.log(++x); //3
+console.log(--x); //2
+console.log(--x); //1
+
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try {
+    if(x.trim() == "") throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 5) throw "too low";
+    if(x > 10) throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+``` 

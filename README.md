@@ -1540,9 +1540,9 @@ Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
 
 ES6 introduced two important new JavaScript keywords: let and const.
 
-These two keywords provide Block Scope in JavaScript.
+** These two keywords provide Block Scope in JavaScript.
 
-Variables declared inside a { } block cannot be accessed from outside the block:
+- Variables declared inside a { } block cannot be accessed from outside the block:
 {
   const x = 2;
 }
@@ -1558,15 +1558,28 @@ Variables declared inside a { } block cannot be accessed from outside the block:
 // x CAN be used here
 
 Local Scope
-Variables declared within a JavaScript function, become LOCAL to the function.
+- Variables declared within a JavaScript function, become LOCAL to the function.
 
 // code here can NOT use carName
-
 function myFunction() {
   let carName = "Volvo";
   // code here CAN use carName
 }
-
 // code here can NOT use carName
 
+Global JavaScript Variables
+- A variable declared outside a function, becomes GLOBAL.
+
+let carName = "Volvo";
+// code here can use carName
+function myFunction() {
+// code here can also use carName
+}
+
+The Lifetime of JavaScript Variables
+The lifetime of a JavaScript variable starts when it is declared.
+
+Function (local) variables are deleted when the function is completed.
+
+In a web browser, global variables are deleted when you close the browser window (or tab).
 ```

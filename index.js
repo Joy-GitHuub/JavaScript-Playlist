@@ -66,15 +66,3 @@ console.log(max); */
     return acc + curr;
 }, 0);
 console.log(a); */
-
-let x = 1;
-// console.log(x++);
-// console.log(x++);
-// console.log(x++);
-// console.log(x--);
-// console.log(x--);
-// console.log(x--);
-console.log(++x);
-console.log(++x);
-console.log(--x);
-console.log(--x);

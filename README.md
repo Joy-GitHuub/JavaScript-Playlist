@@ -1525,3 +1525,48 @@ function myFunction() {
   }
 }
 ``` 
+
+## 18 JavaScript Scope
+- Scope determines the accessibility (visibility) of variables.
+- JavaScript has 3 types of scope:
+    - Block Scope
+    - Function Scope
+    - Global Scope
+
+### Example:
+```js
+Block Scope
+Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+ES6 introduced two important new JavaScript keywords: let and const.
+
+These two keywords provide Block Scope in JavaScript.
+
+Variables declared inside a { } block cannot be accessed from outside the block:
+{
+  const x = 2;
+}
+// x can NOT be used here
+{
+  let x = 2;
+}
+// x can NOT be used here
+
+{
+  var x = 2;
+}
+// x CAN be used here
+
+Local Scope
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+// code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
+
+```

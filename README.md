@@ -1119,3 +1119,124 @@ tan(x)	Returns the tangent of an angle
 tanh(x)	Returns the hyperbolic tangent of a number
 trunc(x)	Returns the integer part of a number (x)
 ```
+
+### 12. 2 Math random()
+- Math.random() always returns a number lower than 1.
+- Math.random() used with Math.floor() can be used to return random integers.
+### Example:
+```js
+// Returns a random number:
+Math.random();
+
+// Returns a random integer from 0 to 9:
+Math.floor(Math.random() * 10);
+
+// Returns a random integer from 0 to 10:
+Math.floor(Math.random() * 11);
+
+// Returns a random integer from 0 to 99:
+Math.floor(Math.random() * 100);
+
+// Returns a random integer from 0 to 100:
+Math.floor(Math.random() * 101);
+
+// Returns a random integer from 1 to 10:
+Math.floor(Math.random() * 10) + 1;
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+```
+
+## 13 JavaScript Booleans / Conditions
+- A JavaScript boolean represents one of two values: (true | false).
+- JavaScript has a Boolean data type. It can only take the values true or false.
+- You can use the Boolean() function to find out if an expression (or a variable) is true:
+
+### 13.1 Comparisons and Conditions
+- The chapter JS Comparisons gives a full overview of comparison operators.
+### Example:
+```js
+1. == (equal to)
+2. > (greater than)
+3. <> (less than)
+4. ===	(equal value and equal type)
+5. !=	(not equal)
+6. !==	(not equal value or not equal type)
+7. >=	(greater than or equal to)
+7. <=	(less than or equal to)
+
+let x = 0;
+Boolean(x); // False
+
+let x = -0;
+Boolean(x); // False
+
+let x = "";
+Boolean(x); // False
+
+let x;
+Boolean(x); // False
+
+let x = null;
+Boolean(x); // False
+
+let x = false;
+Boolean(x); // False
+
+let x = 10 / "Hallo"; //NaN
+Boolean(x); // False 
+```
+
+### 13.2 Logical Operator
+- Logical Operators are used to determine the logic between variables or values.
+- (&&) => AND
+- (||) => OR
+- (!) => NOT
+
+- The Optional Chaining Operator (?.)
+- The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+
+### 13.2 JS if, else and else if
+### Example:
+- Use if to specify a block of code to be executed, if a specified condition is true
+- Use else to specify a block of code to be executed, if the same condition is false
+- Use else if to specify a new condition to test, if the first condition is false
+- Use switch to specify many alternative blocks of code to be executed
+```js
+if (condition) {
+  //  block of code to be executed if the condition is true
+}
+
+if (hour < 18) {
+  greeting = "Good day";
+}
+
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+if (condition1) {
+  //  block of code to be executed if condition1 is true
+} else if (condition2) {
+  //  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  //  block of code to be executed if the condition1 is false and condition2 is false
+}
+
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+```

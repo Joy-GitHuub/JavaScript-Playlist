@@ -77,7 +77,7 @@ let p = a/b; // 10
 ```
 
 
-## 2 JavaScript Data Types
+## 2. JavaScript Data Types
 
 ### 2.1 How Many Data Types?
 - JavaScript has 8 DataTypes
@@ -148,7 +148,7 @@ typeof (3 + 4)        // Returns "number"
 let car;    // Value is undefined, type is undefined
 ```
 
-## 3 JavaScript Function
+## 3. JavaScript Function
 - A JavaScript Function is a block of code designed to perform a particular task.
 - A JavaScript function is executed when "something" invokes it (calls it).
 ### 3.1 Function Syntax
@@ -177,7 +177,7 @@ let x = myFunction(4, 3);   // Function is called, return value will end up in x
 console.log(x);
 ```
 
-## 4 JavaScript Obejct
+## 4. JavaScript Obejct
 
 ### 4.1 What is JavaScript Object?
 - In JavaScript, an object is an unordered collection of key-value pairs. Each key-value pair is called a property.
@@ -262,7 +262,7 @@ false
 true
 ``` 
 
-## 5 JavaScript Strings
+## 5. JavaScript Strings
  ### 5.1 What is JS String?
  - Summary: in this tutorial, you’ll learn about the JavaScript string primitive type and how to use it to define strings.
  - JavaScript strings are primitive values. Also, strings are immutable. It means that if you modify a string, you will always get a new string. The original string doesn’t change.
@@ -356,7 +356,7 @@ for (const i of x) {
 let text = "I love cats. Cats are very easy to love. Cats are very popular.";
 ```
 
-## 6 JavaScript Template Literals
+## 6. JavaScript Template Literals
 ### 6.1 What is Template Literals?
 - Template literals are literals delimited with backtick ( ` ) characters, allowing for multi-line strings, string interpolation with embedded expressions, and special constructs called tagged templates.
 - Synonyms:
@@ -385,7 +385,7 @@ let VAT = 0.25;
 let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
 ```
 
-## 7 JavaScript Numbers
+## 7. JavaScript Numbers
 
 ### 7.1 Types of number?
 - JavaScript has only one type of number. Numbers can be written with or without decimals.
@@ -523,7 +523,7 @@ Number(new Date("1970-01-01")); //output 0
     b. Number.isSafeInteger(12345678901234567890);
 ```
 
-## 8 JavaScript Arrays
+## 8. JavaScript Arrays
 ### 8.1 What is javaScript Array?
 - An array is a special variable, which can hold more than one value:
 - const cars = ["Saab", "Volvo", "BMW"];
@@ -664,7 +664,7 @@ cars.sort(function(a, b){
 });
 ```
 
-## 9 Array iteration
+## 9. Array iteration
 
 ### 9.1 Concept array iteration
 - Array iteration methods operate on every array item.
@@ -937,7 +937,7 @@ const q4 = ["Oct", "Nov", "May"];
 const year = [...q1, ...q2, ...q3, ...q4];
 ```
 
-## 10 Variable Const
+## 10. Variable Const
 
 ### 10.1 Array Const
 - In 2015, JavaScript introduced an important new keyword: const.
@@ -976,7 +976,7 @@ const cars = ["Saab", "Volvo", "BMW"];
 // Here cars[0] is "Saab"
 ```
 
-## 11 JavaScript Dates
+## 11. JavaScript Dates
 
 ### 11.1 Date Objects
 ### Example:
@@ -1063,7 +1063,7 @@ const year = day * 365;
 let years = Math.round(Date.now() / year);
 ```
 
-## 12 JavaScript Math
+## 12. JavaScript Math
 
 ### 12.1 Math Object
 ### Example:
@@ -1148,7 +1148,7 @@ function getRndInteger(min, max) {
 }
 ```
 
-## 13 JavaScript Booleans / Conditions
+## 13. JavaScript Booleans / Conditions
 - A JavaScript boolean represents one of two values: (true | false).
 - JavaScript has a Boolean data type. It can only take the values true or false.
 - You can use the Boolean() function to find out if an expression (or a variable) is true:
@@ -1299,7 +1299,7 @@ switch (new Date().getDay()) {
 }
 ```
 
-## 14 JavaScript Loop
+## 14. JavaScript Loop
 - Different Kinds of Loops
     - FOR
     - FOR/IN
@@ -1373,7 +1373,7 @@ for (let i = 0; i < x.length; i++) {
 }
 ```
 
-## 15 JavaScript Sets
+## 15. JavaScript Sets
 - A JavaScript Set is a collection of unique values.
 - Each value can only occur once in Set.
 
@@ -1424,7 +1424,7 @@ for (const y of x.values()) {
 x.clear();
 ```
         
-## 16 JavaScript Map
+## 16. JavaScript Map
 - A Map holds key-value pairs where the keys can be any datatype.
 - A Map remembers the original insertion order of the keys.
 ### Example:
@@ -1472,7 +1472,7 @@ fruits.clear()
 console.log(fruits);
 ```
 
-## 17 Regular Expressions
+## 17. Regular Expressions
 - A Regular expression is a sequence of characters that forms a search pattern.
 - The search pattern can be used for text search and text replace operations.
 
@@ -1526,13 +1526,12 @@ function myFunction() {
 }
 ``` 
 
-## 18 JavaScript Scope
+## 18. JavaScript Scope
 - Scope determines the accessibility (visibility) of variables.
 - JavaScript has 3 types of scope:
     - Block Scope
     - Function Scope
     - Global Scope
-
 ### Example:
 ```js
 Block Scope
@@ -1582,4 +1581,214 @@ The lifetime of a JavaScript variable starts when it is declared.
 Function (local) variables are deleted when the function is completed.
 
 In a web browser, global variables are deleted when you close the browser window (or tab).
+
+** JavaScript Initializations are Not Hoisted
+var x = 5; // Initialize x
+var y = 7; // Initialize y
+console.log(x,y);
+
+let p = 5;
+console.log(p + q); //Cannot access 'q' before initialization
+let q = 10
+```
+
+## 19. JavaScript This Keyword
+### 19.1 What is this?
+- In JavaScript, the this keyword refers to an object.
+- The value of this depends on in which context it appears: function, class, or global.
+### Example:
+```js
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    id: 5566,
+    myFunction: function (hobby) {
+        this.hobby = hobby;
+        return this;
+    }
+};
+let x = person.myFunction("Programming");
+console.log(x);
+```
+
+## 20. JavaScript Arrow Function
+- Arrow functions were introduced in ES6.
+```js
+let myFunction = (a, b) => a * b;
+hello = () => "Hello World!";
+hello = (val) => "Hello " + val;
+```
+
+## 21. Classes
+- Use the keyword class to create a class.
+- Always add a method named constructor().
+### Example
+```js
+class ClassName {
+  constructor() { ... }
+}
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  };
+};
+const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019);
+```
+
+### 21.1 Class Methods
+- Class Methods
+  - Class methods are created with the same syntax as object methods.
+  - Use the keyword class to create a class.
+  - Always add a constructor() method.
+  - Then add any number of methods.
+  ### Example
+```js
+class ClassName {
+  constructor() { ... }
+  method_1() { ... }
+  method_2() { ... }
+  method_3() { ... }
+};
+
+class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    };
+    age(year) {
+        this.release = `${year - this.year} Year ago.`
+        return this;
+    };
+};
+const car1 = new Car("Frod", 2009);
+const year = new Date().getFullYear();
+console.log(car1.age(year));
+```
+
+## 22. JavaScript OBJECTS
+```js
+In JavaScript, almost "everything" is an object.
+
+  - Booleans can be objects (if defined with the new keyword)
+  - Numbers can be objects (if defined with the new keyword)
+  - Strings can be objects (if defined with the new keyword)
+  - Dates are always objects
+  - Maths are always objects
+  - Regular expressions are always objects
+  - Arrays are always objects
+  - Functions are always objects
+  - Objects are always objects
+
+const person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+```
+
+### 22.1 Object Properties
+- Properties are the most important part of any JavaScript Object.
+- Properties can usually be changed, added, and deleted, but some are read only.
+
+```js
+** Accessing JavaScript Properties
+objectName.property      // person.age
+objectName["property"]   // person["age"]
+objectName[expression]   // x = "age"; person[x]
+
+** Adding New Properties
+person.nationality = "English";
+
+** Delete Properties
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+delete person.age;
+delete person["age"];
+```
+
+- JavaScript for...in Loop
+- The JavaScript for...in statement loops through the properties of an object.
+```js
+for (let variable in object) {
+  // code to be executed
+}
+
+// nasted Object in Array
+const myObj = {
+    name: "John",
+    age: 30,
+    cars: [
+        { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+        { name: "BMW", models: ["320", "X3", "X5"] },
+        { name: "Fiat", models: ["500", "Panda"] }
+    ]
+};
+for (const key in myObj.cars) {
+    let carName = myObj.cars[key].name;
+    let models = myObj.cars[key].models;
+    for (const i of models) {
+        console.log(`Car Name=> ${carName} and models=> ${i}`);
+    }
+}
+```
+
+### 22.2 Object Methods
+```js
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() { // fullName is a Method. 
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+** In an object method, this refers to the object.
+** Alone, this refers to the global object.
+** In a function, this refers to the global object.
+** In a function, in strict mode, this is undefined.
+** In an event, this refers to the element that received the event.
+** Methods like call(), apply(), and bind() can refer this to any object.
+
+*** Accessing Object Methods
+ - objectName.methodName();
+ - name = person.fullName();
+```
+
+### 22.3 Object Accessors
+- JavaScript Accessors (Getters and Setters).
+
+- JavaScript Getter (The get Keyword)
+```js
+// Create an object:
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    language: "ENGLISH",
+    get lang() {
+        return this.language;
+    }
+};
+console.log(person.lang);
+```
+
+- JavaScript Setter (the set Keyword)
+```js
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    language: "ENGLISH",
+    set setAge(age) {
+        this.age = age;
+    },
+};
+// person.setAge = 20;
+console.log(person);
 ```
